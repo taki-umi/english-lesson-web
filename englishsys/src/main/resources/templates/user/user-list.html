@@ -2,12 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>タイトル</title>
-    <meta http-equiv="Content-Type" content="user/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <h1>見出し1</h1>
-    <p>段落1</p>
-    <h2>見出し2</h2>
-    <p>段落2</p>
+    <p th:text="|Hello, ${name}!|" />
   </body>
 </html>

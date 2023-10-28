@@ -1,0 +1,28 @@
+<!-- FILEPATH: /Users/ressa13/english-lesson-web/englishsys/src/main/resources/takiumi/sys/englishsys/repository/UserRepository.xml -->
+
+<!-- UserモデルのResultMap -->
+<resultMap id="userResultMap" type="User">
+    <id property="id" column="id"/>
+    <result property="name" column="name"/>
+    <result property="email" column="email"/>
+    <result property="password" column="password"/>
+    <result property="createdAt" column="created_at"/>
+    <result property="updatedAt" column="updated_at"/>
+</resultMap>
+
+<!-- Userモデルのカラムを返却するselectUserList -->
+<select id="selectUserList" resultMap="userResultMap">
+    SELECT id, name, email
+    FROM user
+    <where>
+        <if test="id != null">
+            AND id = #{id}
+        </if>
+        <if test="name != null">
+            AND name = #{name}
+        </if>
+        <if test="email != null">
+            AND email = #{email}
+        </if>
+    </where>
+</select>
