@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-EnglishsysApplication<englishsys>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "takiumi.sys.englishsys.EnglishsysApplication",
+      "projectName": "englishsys",
+      "args": "",
+      "envFile": "${workspaceFolder}/src/main/resources/application-local.yml"
+    }
+  ]
+}
